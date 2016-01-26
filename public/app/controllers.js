@@ -1,5 +1,5 @@
-var lostCtrls = angular.module('LostCtrls', ['lostServices', 'ngAnimate']);
-var foundCtrls = angular.module('FoundCtrls', ['foundServices', 'ngAnimate']);
+var lostCtrls = angular.module('LostCtrls', ['LostServices', 'ngAnimate']);
+var foundCtrls = angular.module('FoundCtrls', ['FoundServices', 'ngAnimate']);
 
 lostCtrls.controller('LostCtrl', ['$scope', '$routeParams', 'Lost', function ($scope, $routeParams, Lost){
   $scope.showContainer = true;

@@ -1,7 +1,9 @@
 var app = angular.module('PetApp', ['ngRoute', 'LostCtrls', 'FoundCtrls']);
 
 app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider){
-	$routeProvider.when('/lost', {
+	$routeProvider.when('/', {
+		templateUrl: 'app/views/home.html'
+	}).when('/lost', {
 		templateUrl: 'app/views/lost.html',
 		controller: 'LostCtrl'
 	}).when('/lost/new', {
@@ -19,7 +21,7 @@ app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $lo
   }).when('/found/:id', {
     templateUrl: 'app/views/foundShow.html',
     controller: 'FoundShowCtrl'
-  .otherwise({
+  }).otherwise({
 		templateUrl: 'app/views/404.html'
 	});
 
