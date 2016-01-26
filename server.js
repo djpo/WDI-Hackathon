@@ -6,7 +6,8 @@ var app = express();
 var mongoose = require('mongoose');
 var Lost = require('./app/models/lost');
 var Found = require('./app/models/found');
-mongoose.connect('mongodb://user1:password1@ds051645.mongolab.com:51645/lost_found');
+// mongoose.connect('mongodb://user1:password1@ds051645.mongolab.com:51645/lost_found');
+mongoose.connect('mongodb://localhost/api/lost_found');
 
 app.use(express.static(path.join(__dirname, 'public')));
 

@@ -1,0 +1,38 @@
+<div class="col-md-6 col-md-offset-3">
+	<h1 class="page-title">All Da Lost Pets</h1>
+
+  <div class="well" ng-repeat="animal in lostAnimals">
+  	<div class="row">
+
+	  	<div class="col-md-3">
+	  		<img ng-src="{{ animal.image }}" class="animal-image">
+	  	</div>
+
+	  	<div class="col-md-5">
+	  		<div class="row">
+	  			<span class="animal-name">{{ animal.name }}</span>
+	  			<span class="animal-basics">{{ animal.breed }}</span>
+	  		</div>
+	  		<div class="row">
+					{{ animal.color }}
+					<br>
+					{{ animal.age }}
+	  		</div>
+	  	</div>
+
+	  	<div class="col-md-4">
+	  		<div class="row">
+
+{{ animal.location_lost }}
+{{ animal.date_lost }}
+
+{{ animal.contact_name }}
+{{ animal.contact_email }}
+{{ animal.contact_phone }}
+
+				</div>
+			</div>
+
+	  </div>
+  </div>
+</div>

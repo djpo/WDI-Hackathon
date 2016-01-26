@@ -2,7 +2,7 @@ var express = require('express');
 var Lost = require('../models/lost');
 var router = express.Router();
 
-router.route('/')    // accessed at POST http://localhost:3000/api/bears
+router.route('/')
 
   .post(function (req, res) {
     Lost.create(req.body, function (err, lost) {

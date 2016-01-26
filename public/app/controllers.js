@@ -2,22 +2,47 @@ var lostCtrls = angular.module('LostCtrls', ['LostServices', 'ngAnimate']);
 var foundCtrls = angular.module('FoundCtrls', ['FoundServices', 'ngAnimate']);
 
 lostCtrls.controller('LostCtrl', ['$scope', '$routeParams', 'Lost', function ($scope, $routeParams, Lost){
-  $scope.showContainer = true;
-	$scope.lost = [];
-	$scope.search = {};
-  $scope.searchBy = '$';
-	Lost.query(function success (data){
-		$scope.lost = data;
- 	 		$scope.removeItem = function() {
-   			$scope.lost.splice($scope.lost.length-1, 1);
-  			};
-  			$scope.toggleContainer = function() {
-    		$scope.showContainer = !$scope.showContainer;
-  		}
-		console.log(data);
-	}, function error (data){
-		console.log(data)
-	});
+  // This will work once db is hooked up
+ //  $scope.showContainer = true;
+	// $scope.lostAnimals = [];
+	// $scope.search = {};
+ //  $scope.searchBy = '$';
+
+	// Lost.query(function success (data){
+	// 	$scope.lostAnimals = data;
+ // 	 		$scope.removeItem = function() {
+ //   			$scope.lostAnimals.splice($scope.lostAnimals.length-1, 1);
+ //  			};
+ //  			$scope.toggleContainer = function() {
+ //    		$scope.showContainer = !$scope.showContainer;
+ //  		}
+	// 	console.log(data);
+	// }, function error (data){
+	// 	console.log(data)
+	// });
+
+
+// This is for testing the view.
+  $scope.lostAnimals = [
+    {
+      animal_type: "dog",
+      breed: "macaw",
+      name: "Hutch",
+      color: "blue, yellow",
+      age: 15,
+      image: "https://bbca78f093bda4e09182-3cb65c14ed6b68da0b073def86e02e97.ssl.cf1.rackcdn.com/2013/01/Macaw.jpg"
+    },
+    {
+      animal_type: "cat",
+      breed: "macaw",
+      name: "Hutchinson",
+      color: "rainbow",
+      age: 7,
+      image: "http://www.publicdomainpictures.net/pictures/20000/nahled/scarlet-macaw.jpg"
+    }
+  ];
+
+
 }])
 .controller('LostShowCtrl', ['$scope', '$routeParams', 'Lost', function ($scope, $routeParams, Lost){
       $scope.lost = {};
@@ -45,14 +70,20 @@ lostCtrls.controller('LostCtrl', ['$scope', '$routeParams', 'Lost', function ($s
   			contact_phone: ''
       };
 
+///////////////////
       $scope.createLost= function() {
+        console.log($scope.lost);
         Lost.save($scope.lost, function success(data) {
-        $location.path('/');
-      }, function error(data) {
-        console.log(data);
-      });
-    }
+          console.log('createLost() success');
+          console.log(data);
+          $location.path('/');
+        }, function error(data) {
+          console.log('createLost() error');
+          console.log(data);
+        });
+      }
 }]);
+//////////////////
 
 foundCtrls.controller('FoundCtrl', ['$scope', '$routeParams', 'Found', function ($scope, $routeParams, Found){
   $scope.showContainer = true;
