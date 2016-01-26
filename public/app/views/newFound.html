@@ -1,0 +1,41 @@
+<div class="col-md-6 col-md-offset-3" >
+<h1 style="text-align:center; font-family: helvetica; font-size: 50px; color:black">Post Found Pet</h1>
+<form ng-submit="createFound()">
+  <div class="form-group">
+    <input type="text" class="form-control" ng-model="found.animal_type" placeholder="Animal">
+  </div>
+  <div class="form-group">
+    <input type="text" class="form-control" ng-model="found.breed" placeholder="Breed">
+  </div>
+  <div class="form-group">
+    <input type="text" class="form-control" ng-model="found.name" placeholder="Pet's Name">
+  </div>
+  <div class="form-group">
+    <input type="text" class="form-control" ng-model="found.color" placeholder="Color">
+  </div>
+  <div class="form-group">
+    <input type="number" class="form-control" ng-model="found.age" placeholder="Age">
+  </div>
+  <div class="form-group">
+    <input type="text" class="form-control" ng-model="found.image" placeholder="Post Image URL">
+  </div>
+  <div class="form-group">
+    <input type="text" class="form-control" ng-model="found.location_found" placeholder="Location Found">
+  </div>
+  <div class="form-group">
+    <input type="date" class="form-control" ng-model="found.date_found" placeholder="Date Found">
+  </div>
+  <div class="form-group">
+    <input type="text" class="form-control" ng-model="found.contact_name" placeholder="Your Name">
+  </div>
+  <div class="form-group">
+    <input type="text" class="form-control" ng-model="found.contact_email" placeholder="Your Email">
+  </div>
+  <div class="form-group">
+    <input type="number" class="form-control" ng-model="found.contact_phone" placeholder="Your Phone Number">
+  </div>
+  <div class="col-sm-4 col-sm-offset-4">
+    <button type="submit" class="btn btn-primary" style="width:100%;">Submit</button>
+  </div>
+</form>
+</div>
