@@ -6,6 +6,7 @@ var FoundSchema = new mongoose.Schema({
   name: String,
   color: String,
   age: Number,
+  image: String,
   location_found: String,
   date_found: Date,
   contact_name: String,
