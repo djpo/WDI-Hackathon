@@ -2,18 +2,20 @@ var express = require('express');
 var Lost = require('../models/lost');
 var router = express.Router();
 
-router.route('/')    // accessed at POST http://localhost:3000/api/bears
+router.route('/')    // accessed at POST http://localhost:3000/api/
 
   .post(function (req, res) {
+    console.log('Hit Post route');
     Lost.create(req.body, function (err, lost) {
-    if (err) return res.status(500).send(err);
-    res.send(lost);
+      console.log(err, lost);
+      if (err) return res.status(500).send(err);
+      res.send(lost);
    });
  })
   .get(function (req, res) {
-    Lost.find(function (err, lost) {
+    Lost.find(function (err, losts) {
       if (err) return res.status(500).send(err);
-      res.json(lost);
+      res.send(losts);
     });
   });
 
