@@ -1,4 +1,4 @@
-var mongoose = require('mongoose');
+cvar mongoose = require('mongoose');
 
 var LostSchema = new mongoose.Schema({
     animal_type: String,

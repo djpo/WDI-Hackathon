@@ -4,15 +4,17 @@ var path = require('path');
 var app = express();
 
 var mongoose = require('mongoose');
-var Bear = require('./app/models/bear');
-mongoose.connect('mongodb://localhost/bears');
+var Lost = require('./app/models/lost');
+var Found = require('./app/models/found');
+mongoose.connect('mongodb://localhost/lost_found');
 
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use('/api', require('./app/controllers/bear'));
+app.use('/api/lost', require('./app/controllers/lost'));
+app.use('/api/found', require('./app/controllers/found'));
 
 app.get('/*', function (req, res){
 	res.sendFile(path.join(__dirname, 'public/index.html'))
