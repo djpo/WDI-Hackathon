@@ -84,7 +84,7 @@ foundCtrls.controller('FoundCtrl', ['$scope', '$routeParams', 'Found', function 
         });
     }])
 .controller('NewFoundCtrl', ['$scope', '$location', 'Found', function ($scope, $location, Found) {
-      $scope.lost = {
+      $scope.found = {
         animal_type: '',
   			breed: '',
   			name: '',
