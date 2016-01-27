@@ -8,26 +8,26 @@
 		  		<img ng-src="{{ animal.image }}" class="animal-image">
 		  	</div>
 
-		  	<div class="col-md-5">
+		  	<div class="col-md-3">
 		  		<div class="row">
 		  			<span class="animal-name">{{ animal.name }}</span>
 		  			<div>
-		  				{{ animal.breed }}
+		  				<strong>Breed: </strong>{{ animal.breed }}
 		  				<br>
-		  				{{ animal.color }}
+		  				<strong>Color: </strong>{{ animal.color }}
 		  			</div>
 		  		</div>
 		  	</div>
 
-		  	<div class="col-md-4">
+		  	<div class="col-md-6">
 		  		<div>
-						{{ animal.location_lost }}
+						<strong>Missing from</strong> {{ animal.location_lost }}
 					</div>
 					<div>
-						{{ animal.date_lost | date }}
+						<strong>Missing since</strong> {{ animal.date_lost | date }}
 					</div>
 					<div>
-						{{ animal.contact_name }}
+						<strong>Owner:</strong> {{ animal.contact_name }}
 					</div>
 				</div>
 		  </div>
