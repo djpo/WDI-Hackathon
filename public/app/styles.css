@@ -22,3 +22,8 @@
 	font-family: impact;
 	color: pink;
 }
+.navbar{
+	width:100%;
+	border-radius: 0px;
+	margin-top:-20px;
+}
