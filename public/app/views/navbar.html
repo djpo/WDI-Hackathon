@@ -6,22 +6,21 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    <a class="navbar-brand" href="/#!/" style="color:lightblue">AW</a>
+    <a class="navbar-brand" href="/#/" style="color:lightblue">Pet Finder</a>
   </div>
   <div class="navbar-collapse navbar-ex1-collapse" uib-collapse="navCollapsed">
     <ul class="nav navbar-nav navbar-right">
-      <li><a href="/#!/lost">Web Development</a></li>
-      <li><a href="/#!/found">Advertising</a></li>
-    </ul>
-    <ul class="nav navbar-nav navbar-right">
-      <form class="form" ng-submit="search()">
+      <li><a href="/#/lost">Lost Pets</a></li>
+      <li><a href="/#/found">Found Pets</a></li>
+ 
+      <form class="navbar-form navbar-right" role="search">
       <div class="input-group">
-        <input type="text" class="form-control" ng-model="search[searchBy]" placeholder="Search for an Airplane!">
+        <input type="text" class="form-control" ng-model="search[searchBy]" placeholder="Search for your pet">
         <span class="input-group-btn">
           <input type="submit" class="btn btn-success" style="background-color:black; border:1px solid black">
         </span>
      </div>
     </form>
-    </ul>
+   </ul>
   </div>
 </nav>
