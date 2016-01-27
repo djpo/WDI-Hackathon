@@ -34,6 +34,21 @@ lostCtrls.controller('LostCtrl', ['$scope', '$routeParams', 'Lost', function ($s
 }])
 
 .controller('NewLostCtrl', ['$scope', '$location', 'Lost', function ($scope, $location, Lost) {
+<<<<<<< HEAD
+      $scope.lost = {
+        animal_type: '',
+        breed: '',
+        name: '',
+        color: '',
+        age: '',
+        image: '',
+  			location_lost: '',
+  			date_lost: '',
+  			contact_name: '',
+  			contact_email: '',
+  			contact_phone: ''
+      };
+=======
   $scope.lost = {
     animal_type: '',
 		breed: '',
@@ -47,6 +62,7 @@ lostCtrls.controller('LostCtrl', ['$scope', '$routeParams', 'Lost', function ($s
 		contact_email: '',
 		contact_phone: ''
   };
+>>>>>>> 9730d1b987078f94787ef5ca6cf54b9601c1f2ee
 
   $scope.createLost= function() {
     console.log($scope.lost);
