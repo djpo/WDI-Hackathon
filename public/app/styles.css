@@ -1,7 +1,3 @@
-.testClass {
-	border: 2px solid gold;
-}
-
 .page-title {
 	text-align: center;
 	font-family: helvetica;
@@ -13,12 +9,16 @@
 	width: 100%;
 	height: 100%;
 }
-
 .animal-name {
 	font-weight: bold;
 	color: blue;
 }
-
 .animal-basics {
 	float: right;
+}
+
+#invalid {
+	font-size: 2000%;
+	font-family: impact;
+	color: pink;
 }
