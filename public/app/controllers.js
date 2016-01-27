@@ -3,15 +3,15 @@ var foundCtrls = angular.module('FoundCtrls', ['FoundServices', 'ngAnimate']);
 
 lostCtrls.controller('LostCtrl', ['$scope', '$routeParams', 'Lost', function ($scope, $routeParams, Lost) {
   $scope.showContainer = true;
-  $scope.lostAnimals = [];
+  $scope.lost = [];
   $scope.search = {};
   $scope.searchBy = '$';
 
   Lost.query(function success (data) {
     console.log(data);
-  	$scope.lostAnimals = data;
+  	$scope.lost = data;
  		$scope.removeItem = function() {
-		  $scope.lostAnimals.splice($scope.lostAnimals.length-1, 1);
+		  $scope.lost.splice($scope.lost.length-1, 1);
 		};
 		$scope.toggleContainer = function() {
 		  $scope.showContainer = !$scope.showContainer;
