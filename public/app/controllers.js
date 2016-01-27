@@ -68,8 +68,8 @@ foundCtrls.controller('FoundCtrl', ['$scope', '$routeParams', 'Found', function 
   $scope.searchBy = '$';
 	Found.query(function success (data){
 		$scope.found = data;
-	 		$scope.removeItem = function() {
-			  $scope.found.splice($scope.found.length-1, 1);
+	 	$scope.removeItem = function() {
+		  $scope.found.splice($scope.found.length-1, 1);
 		};
 		$scope.toggleContainer = function() {
 		  $scope.showContainer = !$scope.showContainer;
