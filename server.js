@@ -20,7 +20,7 @@ app.use('/api/lost', require('./app/controllers/lost'));
 app.use('/api/found', require('./app/controllers/found'));
 
 app.get('/*', function (req, res){
-	res.sendfile(path.join(__dirname, 'public/index.html'));
+	res.sendFile(path.join(__dirname, 'public/index.html'));
 });
 
 app.listen(process.env.PORT || 3000);
