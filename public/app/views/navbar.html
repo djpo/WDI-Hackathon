@@ -13,7 +13,7 @@
       <li><a href="/#/lost">Lost Pets</a></li>
       <li><a href="/#/found">Found Pets</a></li>
  
-      <form class="navbar-form navbar-right" role="search">
+      <form class="navbar-form navbar-right" role="search" ng-submit="search()">
       <div class="input-group">
         <input type="text" class="form-control" ng-model="search[searchBy]" placeholder="Search for your pet">
         <span class="input-group-btn">
