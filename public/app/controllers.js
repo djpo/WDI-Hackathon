@@ -77,7 +77,7 @@ foundCtrls.controller('FoundCtrl', ['$scope', '$routeParams', 'Found', function 
 	});
 }])
 
-.controller('FoundShowCtrl', ['$scope', '$routeParams', 'Lost', function ($scope, $routeParams, Found) {
+.controller('FoundShowCtrl', ['$scope', '$routeParams', 'Found', function ($scope, $routeParams, Found) {
   $scope.found = {};
   Found.get(
     {id: $routeParams.id},
