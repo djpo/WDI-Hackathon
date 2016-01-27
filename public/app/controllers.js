@@ -47,7 +47,7 @@ lostCtrls.controller('LostCtrl', ['$scope', '$routeParams', 'Lost', function ($s
 		contact_phone: ''
   };
 
-  $scope.createLost= function() {
+  $scope.createLost = function() {
     Lost.save($scope.lost, function success(data) {
       $location.path('/');
     }, function error(data) {
@@ -77,7 +77,7 @@ foundCtrls.controller('FoundCtrl', ['$scope', '$routeParams', 'Found', function 
 	});
 }])
 
-.controller('FoundShowCtrl', ['$scope', '$routeParams', 'Lost', function ($scope, $routeParams, Found) {
+.controller('FoundShowCtrl', ['$scope', '$routeParams', 'Found', function ($scope, $routeParams, Found) {
   $scope.found = {};
   Found.get(
     {id: $routeParams.id},
