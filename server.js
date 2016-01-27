@@ -6,7 +6,6 @@ var app = express();
 var mongoose = require('mongoose');
 var Lost = require('./app/models/lost');
 var Found = require('./app/models/found');
-
 var mongodbUri = 'mongodb://user2:password2@ds051645.mongolab.com:51645/lost_found';
 mongoose.connect(mongodbUri);
 var db = mongoose.connection;
