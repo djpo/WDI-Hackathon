@@ -13,12 +13,9 @@
 	font-weight: bold;
 	color: blue;
 }
-.animal-basics {
-	float: right;
-}
 
 #invalid {
-	font-size: 2000%;
+	font-size: 1000%;
 	font-family: impact;
 	color: pink;
 }
