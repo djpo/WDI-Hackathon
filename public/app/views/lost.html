@@ -1,38 +1,37 @@
 <div class="col-md-6 col-md-offset-3">
 	<h1 class="page-title">Lost Pets</h1>
+	<div class="well" ng-repeat="animal in lost">
+	  <a ng-href="/lost/{{ animal._id }}">
+	  	<div class="row">
 
-  <div class="well" ng-repeat="animal in lost | filter: search">
-  	<div class="row">
+		  	<div class="col-md-3">
+		  		<img ng-src="{{ animal.image }}" class="animal-image">
+		  	</div>
 
-	  	<div class="col-md-3">
-	  		<img ng-src="{{ animal.image }}" class="animal-image">
-	  	</div>
+		  	<div class="col-md-5">
+		  		<div class="row">
+		  			<span class="animal-name">{{ animal.name }}</span>
+		  			<div>
+		  				{{ animal.breed }}
+		  				<br>
+		  				{{ animal.color }}
+		  			</div>
+		  		</div>
+		  	</div>
 
-	  	<div class="col-md-5">
-	  		<div class="row">
-	  			<span class="animal-name">{{ animal.name }}</span>
-	  			<span class="animal-basics">{{ animal.breed }}</span>
-	  		</div>
-	  		<div class="row">
-					{{ animal.color }}
-					<br>
-					{{ animal.age }}
-	  		</div>
-	  	</div>
-
-	  	<div class="col-md-4">
-	  		<div class="row">
-
-					{{ animal.location_lost }}
-					{{ animal.date_lost }}
-
-					{{ animal.contact_name }}
-					{{ animal.contact_email }}
-					{{ animal.contact_phone }}
-
+		  	<div class="col-md-4">
+		  		<div>
+						{{ animal.location_lost }}
+					</div>
+					<div>
+						{{ animal.date_lost | date }}
+					</div>
+					<div>
+						{{ animal.contact_name }}
+					</div>
 				</div>
-			</div>
 
-	  </div>
-  </div>
+		  </div>
+		 </a>
+	</div>
 </div>
