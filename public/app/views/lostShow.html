@@ -1,27 +1,27 @@
 <h1 class="page-title">{{ lost.name }}</h1>
 
 <div class="well">
-	<div class="row">
+  <div class="row">
 
-  	<div class="col-md-3">
-  			<img ng-src="{{ lost.image }}" class="animal-image">
-  	</div>
+    <div class="col-md-3">
+        <img ng-src="{{ lost.image }}" class="animal-image">
+    </div>
 
-  	<div class="col-md-3">
-			<span class="animal-name">{{ lost.name }}</span>
-			<br>
-			<strong>Breed:</strong> {{ lost.breed }}</span>
-			<br>
-			<strong>Color:</strong> {{ lost.color }}
-		</div>
+    <div class="col-md-3">
+      <span class="animal-name">{{ lost.name }}</span>
+      <br>
+      <strong>Breed:</strong> {{ lost.breed }}</span>
+      <br>
+      <strong>Color:</strong> {{ lost.color }}
+    </div>
 
-  	<div class="col-md-6">
-			<strong>Missing from:</strong> {{ lost.location_lost }}
-			<br>
-			<strong>Missing since:</strong> {{ lost.date_lost | date}}
-			<br>
-			<strong>Owner:</strong> {{ lost.contact_name }}
-		</div>
+    <div class="col-md-6">
+      <strong>Missing from:</strong> {{ lost.location_lost }}
+      <br>
+      <strong>Missing since:</strong> {{ lost.date_lost | date}}
+      <br>
+      <strong>Owner:</strong> {{ lost.contact_name }}
+    </div>
 
   </div>
 </div>

@@ -1,39 +1,37 @@
 <div class="col-md-6 col-md-offset-3">
-	<h1 class="page-title">Found Pets</h1>
-	<form role="search" ng-submit="search()" style="margin: 30px">
-      <div class="input-group">
-        <input type="text" class="form-control" ng-model="search[searchBy]" placeholder="Search for your pet">
-        <span class="input-group-btn">
-          <input type="submit" class="btn btn-success" style="background-color:black; border:1px solid black">
-        </span>
-     </div>
-    </form>
+  <h1 class="page-title">Found Pets</h1>
+
+  <form role="search" ng-submit="search()" style="margin: 30px">
+    <div class="input-group">
+      <input type="text" class="form-control" ng-model="search[searchBy]" placeholder="Search for your pet">
+      <span class="input-group-btn">
+        <input type="submit" class="btn btn-success" style="background-color:black; border:1px solid black">
+      </span>
+    </div>
+  </form>
+
   <div class="well" ng-repeat="animal in found | filter: search">
-  	<a ng-href="/found/{{ animal._id }}">
-	  	<div class="row">
-
-		  	<div class="col-md-3">
-		  		<img ng-src="{{ animal.image }}" class="animal-image">
-		  	</div>
-
-		  	<div class="col-md-3">
-	  			<span class="animal-name">{{ animal.name }}</span>
-	  			<br>
-  				<strong>Breed: </strong>{{ animal.breed }}
-  				<br>
-  				<strong>Color: </strong>{{ animal.color }}
-	  		</div>
-
-	  		<div class="col-md-6">
-  				<strong>Location found:</strong> {{ animal.location_found }}
-					<br>
-					<strong>Date found:</strong> {{ animal.date_found | date }}
-					<br>
-					<strong>Found by:</strong> {{ animal.contact_name }}
-  			</div>
-  							
-		  </div>
-		 </a>
-	</div>
+    <a ng-href="/found/{{ animal._id }}">
+      <div class="row">
+        <div class="col-md-3">
+          <img ng-src="{{ animal.image }}" class="animal-image">
+        </div>
+        <div class="col-md-3">
+          <span class="animal-name">{{ animal.name }}</span>
+          <br>
+          <strong>Breed: </strong>{{ animal.breed }}
+          <br>
+          <strong>Color: </strong>{{ animal.color }}
+        </div>
+        <div class="col-md-6">
+          <strong>Location found:</strong> {{ animal.location_found }}
+          <br>
+          <strong>Date found:</strong> {{ animal.date_found | date }}
+          <br>
+          <strong>Found by:</strong> {{ animal.contact_name }}
+        </div>        
+      </div>
+     </a>
+  </div>
 
 </div>
