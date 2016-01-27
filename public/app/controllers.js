@@ -8,7 +8,6 @@ lostCtrls.controller('LostCtrl', ['$scope', '$routeParams', 'Lost', function ($s
   $scope.searchBy = '$';
 
   Lost.query(function success (data) {
-    console.log(data);
   	$scope.lost = data;
  		$scope.removeItem = function() {
 		  $scope.lost.splice($scope.lost.length-1, 1);
@@ -24,7 +23,7 @@ lostCtrls.controller('LostCtrl', ['$scope', '$routeParams', 'Lost', function ($s
 .controller('LostShowCtrl', ['$scope', '$routeParams', 'Lost', function ($scope, $routeParams, Lost) {
   $scope.lost = {};
   Lost.get(
-    {id: $routeParams.lost_id},
+    {id: $routeParams.id},
     function success(data) {
       $scope.lost = data;
     },
@@ -49,10 +48,7 @@ lostCtrls.controller('LostCtrl', ['$scope', '$routeParams', 'Lost', function ($s
   };
 
   $scope.createLost= function() {
-    console.log($scope.lost);
     Lost.save($scope.lost, function success(data) {
-      console.log('createLost() success');
-      console.log(data);
       $location.path('/');
     }, function error(data) {
       console.log('createLost() error');
@@ -68,8 +64,8 @@ foundCtrls.controller('FoundCtrl', ['$scope', '$routeParams', 'Found', function 
   $scope.searchBy = '$';
 	Found.query(function success (data){
 		$scope.found = data;
-	 		$scope.removeItem = function() {
-			  $scope.found.splice($scope.found.length-1, 1);
+	 	$scope.removeItem = function() {
+		  $scope.found.splice($scope.found.length-1, 1);
 		};
 		$scope.toggleContainer = function() {
 		  $scope.showContainer = !$scope.showContainer;
