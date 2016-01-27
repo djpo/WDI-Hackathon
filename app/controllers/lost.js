@@ -2,7 +2,7 @@ var express = require('express');
 var Lost = require('../models/lost');
 var router = express.Router();
 
-router.route('/')    // accessed at POST http://localhost:3000/api/
+router.route('/')
 
   .post(function (req, res) {
     console.log('Hit Post route');
