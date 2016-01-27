@@ -1,28 +1,26 @@
-<div class="col-xs-8 col-xs-offset-2">
+<div class="col-xs-6 col-xs-offset-3">
 	<h1 class="page-title">Lost Pets</h1>
-	
-	{{ lost }}
 
  	<div class="well list-entry" ng-repeat="animal in lost">
 	  <a ng-href="/lost/{{ animal._id }}">
 	  	<div class="row">
 
-		  	<div class="col-xs-3">
+		  	<div class="col-md-3">
 		  		<img ng-src="{{ animal.image }}" class="img-responsive animal-image">
 		  	</div>
 
-		  	<div class="col-xs-3">
+		  	<div class="col-md-3">
 	  			<span class="animal-name">{{ animal.name }}</span>
 	  			<br>
-  				<strong>Breed: </strong>{{ animal.breed }}
+  				<strong>Breed:</strong> {{ animal.breed }}
   				<br>
-  				<strong>Color: </strong>{{ animal.color }}
+  				<strong>Color:</strong> {{ animal.color }}
 		  	</div>
 
-		  	<div class="col-xs-6">
-					<strong>Missing from</strong> {{ animal.location_lost }}
+		  	<div class="col-md-6">
+					<strong>Missing from:</strong> {{ animal.location_lost }}
 					<br>
-					<strong>Missing since</strong> {{ animal.date_lost | date }}
+					<strong>Missing since:</strong> {{ animal.date_lost | date }}
 					<br>
 					<strong>Owner:</strong> {{ animal.contact_name }}
 				</div>

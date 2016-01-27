@@ -1,8 +1,6 @@
 <div class="col-md-6 col-md-offset-3">
 	<h1 class="page-title">Found Pets</h1>
 
-	{{ found }}
-
   <div class="well" ng-repeat="animal in found | filter: search">
   	<a ng-href="/found/{{ animal._id }}">
 	  	<div class="row">
@@ -11,23 +9,22 @@
 		  		<img ng-src="{{ animal.image }}" class="animal-image">
 		  	</div>
 
-		  	<div class="col-md-8">
-		  		<div class="row">
-		  			<span class="animal-name">{{ animal.name }}</span>
-		  			<div>
-		  				<strong>Breed: </strong>{{ animal.breed }}
-		  				<br>
-		  				<strong>Color: </strong>{{ animal.color }}
-		  				<br>
-		  				<strong>Location found</strong> {{ animal.location_found }}
-							<br>
-							<strong>Date found</strong> {{ animal.date_found | date }}
-							<br>
-							<strong>Finder:</strong> {{ animal.contact_name }}
-		  			</div>
-		  		</div>
-		  	</div>
-				
+		  	<div class="col-md-3">
+	  			<span class="animal-name">{{ animal.name }}</span>
+	  			<br>
+  				<strong>Breed: </strong>{{ animal.breed }}
+  				<br>
+  				<strong>Color: </strong>{{ animal.color }}
+	  		</div>
+
+	  		<div class="col-md-6">
+  				<strong>Location found:</strong> {{ animal.location_found }}
+					<br>
+					<strong>Date found:</strong> {{ animal.date_found | date }}
+					<br>
+					<strong>Found by:</strong> {{ animal.contact_name }}
+  			</div>
+  							
 		  </div>
 		 </a>
 	</div>

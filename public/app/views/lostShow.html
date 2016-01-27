@@ -4,32 +4,22 @@
 	<div class="row">
 
   	<div class="col-md-3">
-  		<div class="row">
   			<img ng-src="{{ lost.image }}" class="animal-image">
-  		</div>
   	</div>
 
-  	<div class="col-md-5">
-  		<div class="row">
-  			<span class="animal-name">{{ lost.name }}</span>
-  			<span class="animal-basics">{{ lost.breed }}</span>
-  		</div>
-  		<div class="row">
-				{{ lost.color }}
-				<br>
-				{{ lost.age }}
-  		</div>
-  	</div>
+  	<div class="col-md-3">
+			<span class="animal-name">{{ lost.name }}</span>
+			<br>
+			<strong>Breed:</strong> {{ lost.breed }}</span>
+			<br>
+			<strong>Color:</strong> {{ lost.color }}
 
-  	<div class="col-md-4">
-  		<div class="row">
-
-				{{ lost.location_lost }}
-				{{ lost.date_lost }}
-
-				{{ lost.contact_name }}
-
-			</div>
+  	<div class="col-md-6">
+			<strong>Missing from:</strong> {{ lost.location_lost }}
+			<br>
+			<strong>Missing since:</strong> {{ lost.date_lost | date}}
+			<br>
+			<strong>Owner:</strong> {{ lost.contact_name }}
 		</div>
 
   </div>

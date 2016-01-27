@@ -1,36 +1,26 @@
 <h1 class="page-title">{{ found.name }}</h1>
 
-{{ found }}
-
 <div class="well">
-	<div class="row">
+  <div class="row">
 
-  	<div class="col-md-3">
-  		<img ng-src="{{ found.image }}" class="animal-image">
-  	</div>
+    <div class="col-md-3">
+        <img ng-src="{{ found.image }}" class="animal-image">
+    </div>
 
-  	<div class="col-md-5">
-  		<div class="row">
-  			<span class="animal-name">{{ found.name }}</span>
-  			<span class="animal-basics">{{ found.breed }}</span>
-  		</div>
-  		<div class="row">
-				{{ found.color }}
-				<br>
-				{{ found.age }}
-  		</div>
-  	</div>
+    <div class="col-md-3">
+      <span class="animal-name">{{ found.name }}</span>
+      <br>
+      <strong>Breed:</strong> {{ found.breed }}</span>
+      <br>
+      <strong>Color:</strong> {{ found.color }}
 
-  	<div class="col-md-4">
-  		<div class="row">
-
-				{{ found.location_found }}
-				{{ found.date_found }}
-
-				{{ found.contact_name }}
-
-			</div>
-		</div>
+    <div class="col-md-6">
+      <strong>Found at:</strong> {{ found.location_found }}
+      <br>
+      <strong>Found on:</strong> {{ found.date_found | date}}
+      <br>
+      <strong>Found by:</strong> {{ found.contact_name }}
+    </div>
 
   </div>
 </div>

@@ -47,7 +47,7 @@ lostCtrls.controller('LostCtrl', ['$scope', '$routeParams', 'Lost', function ($s
 		contact_phone: ''
   };
 
-  $scope.createLost= function() {
+  $scope.createLost = function() {
     Lost.save($scope.lost, function success(data) {
       $location.path('/');
     }, function error(data) {
