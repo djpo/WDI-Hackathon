@@ -33,11 +33,11 @@ lostCtrls.controller('LostCtrl', ['$scope', '$routeParams', 'Lost', function ($s
 .controller('NewLostCtrl', ['$scope', '$location', 'Lost', function ($scope, $location, Lost) {
       $scope.lost = {
         animal_type: '',
-  			breed: '',
-  			name: '',
-  			color: '',
-  			age: '',
-  			image: '',
+        breed: '',
+        name: '',
+        color: '',
+        age: '',
+        image: '',
   			location_lost: '',
   			date_lost: '',
   			contact_name: '',
